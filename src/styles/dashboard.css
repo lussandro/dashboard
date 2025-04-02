@@ -1,0 +1,365 @@
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0e0c2b, #131136);
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+/* SIDEBAR BONITONA */
+.sidebar {
+  width: 180px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.sidebar a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.sidebar a:hover {
+  color: #c084fc;
+}
+
+.logout-button {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.logout-button:hover {
+  background: #dc2626;
+}
+
+.dashboard-main {
+  flex: 1;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 1000px;
+}
+
+
+
+.titulo-sistema {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #790591;
+  margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+  font-size: 1.25rem;
+  color: #eee;
+  margin-bottom: 2rem;
+}
+
+/* BOX DE STATUS */
+.instancia-box {
+  background: #084783;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  min-width: 450px;
+}
+
+.instancia-box strong {
+  color: #fff;
+}
+
+.icone {
+  margin-left: 8px;
+  cursor: pointer;
+  color: #aaa;
+  transition: 0.2s;
+}
+
+.icone:hover {
+  color: #c084fc;
+}
+
+.online-icon {
+  color: #22c55e;
+  margin-right: 8px;
+  margin-left: 3px;
+}
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  margin-bottom: 1rem;
+}
+
+.nav-links li a {
+  display: block;
+  padding: 0.25rem 0;
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.nav-links li a:hover {
+  color: #c084fc;
+}
+.status-icon.online {
+  color: #22c55e;
+}
+.status-icon.offline {
+  color: #ef4444;
+}
+
+.botao-instancia {
+  background-color: #22c55e;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  align-self: flex-end;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.qrcode-modal {
+  background: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+  box-shadow: 0 0 10px #0005;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qrcode-img {
+  width: 280px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.qr-buttons button {
+  margin: 0 0.5rem;
+  background: #0ea5e9;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.qr-buttons button:last-child {
+  background: #ef4444;
+}
+.botao-instancia {
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  align-self: flex-end;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.botao-instancia.online {
+  background-color: #ef4444; /* vermelho - desconectar */
+}
+
+.botao-instancia.offline {
+  background-color: #22c55e; /* verde - conectar */
+}
+.instancia-box {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.teste-envio {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #084783;
+  ;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 480px;       /* <-- IGUAL ao card da instância */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.teste-envio input,
+.teste-envio textarea {
+  background-color: #92afcf;
+  color: rgb(5, 5, 5);
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  transition: border 0.2s ease;
+}
+
+.teste-envio input:focus,
+.teste-envio textarea:focus {
+  border-color: #0ea5e9;
+  outline: none;
+}
+
+.teste-envio textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.teste-envio button {
+  align-self: flex-end;
+  background-color: #0ea5e9;
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.teste-envio button:hover {
+  background-color: #0284c7;
+}
+
+.financeiro-main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tabela-financeiro {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.tabela-financeiro th,
+.tabela-financeiro td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  color: #ddd;
+  border-bottom: 1px solid #333;
+}
+
+.tabela-financeiro th {
+  background-color: #084783;
+  color: white;
+  font-weight: 600;
+}
+
+.tabela-financeiro tr:hover {
+  background-color: #1f2f43;
+}
+
+.boleto-link {
+  color: #0ea5e9;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.boleto-link:hover {
+  color: #0284c7;
+  text-decoration: underline;
+}
+.minha-conta-main {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza todo conteúdo horizontalmente */
+}
+
+.dados-usuario {
+  background: #084783;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 500px; /* largura fixa igual aos outros cards */
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.campo label {
+  color: white;
+  font-weight: 600;
+}
+
+.campo input {
+  background-color: #92afcf;
+  color: #050505;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.btn-editar, .btn-salvar {
+  align-self: flex-end;
+  padding: 0.5rem 1rem;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-editar {
+  background-color: #0ea5e9;
+}
+
+.btn-salvar {
+  background-color: #22c55e;
+}
+
+.btn-editar:hover {
+  background-color: #0284c7;
+}
+
+.btn-salvar:hover {
+  background-color: #16a34a;
+}
